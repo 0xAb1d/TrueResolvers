@@ -30,7 +30,7 @@ jobs:
           git config user.name "Abid Ahmad"
           git config user.email "149966763+0xAb1d@users.noreply.github.com"
 
-          git add resolvers.txt resolvers-trusted.txt data/metrics.csv data/stats.json
+          git add resolvers.txt resolvers-trusted.txt data/metrics.csv data/stats.json README.md
 
           if git diff --cached --quiet; then
             echo "no changes"
