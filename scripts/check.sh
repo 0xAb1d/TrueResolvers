@@ -22,3 +22,4 @@ tier="validated"
 [ "$pass" -eq 3 ] && [ "$avg" -le 200 ] && tier="trusted"
 
 echo "$ip,$pass,$avg,$tier"
+exit 0
