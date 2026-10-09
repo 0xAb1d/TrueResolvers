@@ -1,3 +1,4 @@
 data/raw.txt
+data/alive.txt
 data/src-*.txt
 .DS_Store

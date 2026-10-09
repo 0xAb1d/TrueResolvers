@@ -10,22 +10,17 @@ permissions:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install dnsutils
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq dnsutils
 
       - name: Fetch
         run: bash scripts/fetch.sh
 
       - name: Validate
         run: bash scripts/validate.sh
-        env:
-          PARALLEL: 150
 
       - name: Generate
         run: bash scripts/generate.sh

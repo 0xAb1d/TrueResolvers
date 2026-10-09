@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# Test a single DNS resolver for accuracy and speed.
-# Usage: check.sh <ip>
-# Output: ip,pass,avg_ms,tier (or nothing if failed)
-
 ip="$1"
 [ -z "$ip" ] && exit 0
 
@@ -10,7 +6,7 @@ pass=0
 total_ms=0
 
 for domain in google.com cloudflare.com example.com; do
-    output=$(dig @"$ip" "$domain" A +time=3 +tries=1 2>/dev/null) || continue
+    output=$(dig @"$ip" "$domain" A +time=2 +tries=1 2>/dev/null) || continue
 
     if echo "$output" | grep -qE "[[:space:]]IN[[:space:]]+A[[:space:]]+[0-9]"; then
         pass=$((pass + 1))
