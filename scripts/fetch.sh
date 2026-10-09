@@ -19,8 +19,8 @@ grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' "$OUT/src-publicdns.txt" | sort -u > "$OU
 echo "public-dns: $(wc -l < "$OUT/publicdns-clean.txt" | tr -d ' ') resolvers"
 
 # Remove IPs already in Trickest, take random 8000 unique additions
-comm -23 "$OUT/publicdns-clean.txt" "$OUT/trickest-clean.txt" \
-    | shuf | head -8000 > "$OUT/publicdns-sample.txt"
+comm -23 "$OUT/publicdns-clean.txt" "$OUT/trickest-clean.txt" | shuf > "$OUT/publicdns-shuffled.txt"
+head -8000 "$OUT/publicdns-shuffled.txt" > "$OUT/publicdns-sample.txt"
 
 additions=$(wc -l < "$OUT/publicdns-sample.txt" | tr -d ' ')
 echo "public-dns additions (not in trickest): $additions"
