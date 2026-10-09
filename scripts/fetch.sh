@@ -31,4 +31,7 @@ cat "$OUT/trickest-clean.txt" "$OUT/publicdns-sample.txt" | shuf > "$OUT/raw.txt
 total=$(wc -l < "$OUT/raw.txt" | tr -d ' ')
 echo "total to validate: $total"
 
-[ "$total" -lt 100 ] && echo "fetch failed — too few resolvers" && exit 1
+if [ "$total" -lt 100 ]; then
+    echo "fetch failed — too few resolvers"
+    exit 1
+fi

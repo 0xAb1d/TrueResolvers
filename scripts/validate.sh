@@ -23,7 +23,10 @@ xargs -P 50 -I {} bash -c '
 alive=$(wc -l < "$ALIVE" | tr -d ' ')
 echo "pass 1 done — $alive alive out of $count"
 
-[ "$alive" -eq 0 ] && echo "no resolvers passed liveness check" && exit 1
+if [ "$alive" -eq 0 ]; then
+    echo "no resolvers passed liveness check"
+    exit 1
+fi
 
 # --- Pass 2: full scoring on survivors ---
 echo "pass 2 — scoring $alive resolvers"
