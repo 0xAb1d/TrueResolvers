@@ -26,10 +26,10 @@ TrueResolvers is different — every IP is live-tested, scored, and verified bef
 <div align="center">
 <table>
 <tr>
-<td align="center"><strong>4882</strong><br><sub>Validated</sub></td>
-<td align="center"><strong>3580</strong><br><sub>Trusted</sub></td>
-<td align="center"><strong>13373</strong><br><sub>Tested</sub></td>
-<td align="center"><strong>Nov 20, 2026 15:00 UTC</strong><br><sub>Last Run</sub></td>
+<td align="center"><strong>4573</strong><br><sub>Validated</sub></td>
+<td align="center"><strong>3368</strong><br><sub>Trusted</sub></td>
+<td align="center"><strong>13365</strong><br><sub>Tested</sub></td>
+<td align="center"><strong>Nov 20, 2026 23:48 UTC</strong><br><sub>Last Run</sub></td>
 </tr>
 </table>
 </div>
